@@ -323,9 +323,7 @@ ZERO.TextSpeed = ZERO.TextSpeed || {};
      */
     Window_Base.prototype.processCharacter2 = function(textState) {
         let process = true;
-        console.log('process before: ' + VictorEngine.lala);
-        VictorEngine.lala = textState.text[textState.index];
-        console.log('process after: ' + VictorEngine.lala);
+
         if(textState.text[textState.index] == '\x1b'){
             let escapeChar = this.obtainEscapeCodeWithoutIncrementingIndex(this._textState);
             
